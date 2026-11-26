@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>المجلس القومي للدفاع المدني</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#173b59;--bg:#f2f5f8;--card:#fff;--line:#d9e0e8;--mute:#5b6b7f;--acc:#be2d34;--accbg:#fbeaeb;--hd:#173b59;--hdt:#fff;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#e8edf3;--bg:#0f1824;--card:#16222f;--line:#2a3a4c;--mute:#9aabbd;--acc:#ff6b7d;--accbg:#2d1a1e;--hd:#0a1a30;color-scheme:dark}}
+*,*:before,*:after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.8 "IBM Plex Sans Arabic",Tahoma,Arial,sans-serif}
+h1,h2,h3{font-family:"Reem Kufi","IBM Plex Sans Arabic",Tahoma,sans-serif;line-height:1.4;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+header{background:var(--hd);color:var(--hdt);position:sticky;top:0;z-index:20;padding-top:env(safe-area-inset-top,0px)}
+.bar{max-width:1120px;margin:auto;display:flex;align-items:center;gap:12px;padding:10px 16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;margin-inline-end:auto}
+.mark{width:40px;height:40px;border-radius:50% 50% 8px 8px;background:var(--acc);display:grid;place-items:center;font:700 20px "Reem Kufi";color:#fff}
+.brand b{font:700 18px "Reem Kufi"}
+.brand small{display:block;font-size:12px;opacity:.75;line-height:1.2}
+nav{display:flex;gap:4px;flex-wrap:wrap;position:relative}
+nav>div{position:relative}
+.nb{background:none;border:0;color:inherit;font:inherit;font-size:15px;padding:6px 12px;border-radius:6px;cursor:pointer}
+.nb:hover,.nb[aria-expanded=true]{background:rgba(255,255,255,.14)}
+.menu{display:none;position:absolute;inset-inline-start:0;top:100%;min-width:210px;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:6px;box-shadow:0 8px 24px rgba(0,0,0,.18)}
+.menu.open{display:block}
+.menu a{display:block;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:15px}
+.menu a:hover{background:var(--accbg)}
+.lang{background:none;border:1px solid rgba(255,255,255,.4);color:inherit;border-radius:6px;padding:4px 12px;font:inherit;font-size:14px;cursor:pointer}
+main{max-width:1120px;margin:auto;padding:24px 16px 48px;min-height:70vh}
+.hero{background:var(--hd);color:var(--hdt);border-radius:14px;padding:40px 28px;display:grid;gap:18px}
+.hero h1{font-size:clamp(28px,5vw,46px)}
+.hero q{font-size:18px;opacity:.9;max-width:60ch;border-inline-start:4px solid var(--acc);padding-inline-start:14px;quotes:"«" "»"}
+.sf{display:flex;gap:8px;max-width:560px}
+.sf input,.f input,.f textarea,.f select,.tools input,.tools select{font:inherit;padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);width:100%}
+.sf input{flex:1}
+.btn{font:inherit;font-weight:600;background:var(--acc);color:#fff;border:0;border-radius:8px;padding:9px 20px;cursor:pointer}
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:22px 0;font-weight:600}
+.flow span{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:4px 16px}
+.flow i{color:var(--acc);font-style:normal}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin:20px 0}
+.box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px}
+.box h3{font-size:20px;margin-bottom:8px}
+.li{display:block;text-decoration:none;padding:8px 0;border-top:1px solid var(--line)}
+.li small,.meta{color:var(--mute);font-size:13px}
+.grp{margin-top:28px}
+.grp h2{font-size:22px;margin-bottom:10px;border-inline-start:5px solid var(--acc);padding-inline-start:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips a{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:6px 14px;text-decoration:none}
+.chips a:hover{border-color:var(--acc)}
+.crumb{font-size:14px;color:var(--mute);margin-bottom:6px}
+.crumb a{color:var(--acc)}
+h1.pt{font-size:clamp(26px,4vw,36px);margin-bottom:8px}
+.lead{max-width:72ch;color:var(--mute);margin:0 0 20px}
+.demo{background:var(--accbg);border:1px dashed var(--acc);border-radius:8px;padding:8px 14px;font-size:14px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.tools>*{flex:1;min-width:150px}
+.row{display:flex;gap:12px;justify-content:space-between;align-items:center;padding:12px 0;border-top:1px solid var(--line);flex-wrap:wrap}
+.tag{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:0 10px;color:var(--mute);white-space:nowrap}
+.tile{aspect-ratio:4/3;border-radius:10px;border:1px solid var(--line);background:repeating-linear-gradient(135deg,var(--card) 0 12px,var(--bg) 12px 24px);display:grid;place-items:center;text-align:center;color:var(--mute);padding:10px}
+.f{display:grid;gap:12px;max-width:560px}
+.f label{display:grid;gap:4px;font-weight:500}
+.ok{background:#e6f4ea;color:#14532d;border-radius:8px;padding:10px 14px;margin-top:10px}
+details.box{margin-bottom:10px}
+summary{cursor:pointer;font-weight:600}
+footer{background:var(--hd);color:var(--hdt);padding:22px 16px calc(22px + env(safe-area-inset-bottom,0px));font-size:14px}
+footer div{max-width:1120px;margin:auto;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;opacity:.85}
+body,h1,h2,h3,.brand b,.seg button,.btn,input,select,textarea,.nb{font-family:"IBM Plex Sans Arabic",Cairo,Tahoma,sans-serif}
+header{background:#173b59;border-bottom:3px solid #d9a441}
+.demo{background:#fbf3df;border-color:#d9a441;color:#5c4310}
+.mark{background:none;border-radius:0}
+.hero{background:linear-gradient(90deg,rgba(23,59,89,.94),rgba(23,59,89,.74)),var(--photo,linear-gradient(135deg,#173b59,#1f4d75));background-size:cover;background-position:center;display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;padding:44px 36px;border-radius:22px;position:relative;overflow:hidden;box-shadow:0 12px 32px rgba(11,37,69,.22)}
+.hero h1{font-size:clamp(26px,4vw,40px);font-weight:800}
+.wel{font-size:18px;opacity:.92;max-width:52ch;margin:0;border-inline-start:4px solid #d9a441;padding-inline-start:14px}
+.hv svg{width:100%;height:auto;display:block}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding:28px 20px}.hv{display:none}}
+.alert{display:flex;gap:12px;align-items:center;background:#fdecee;color:#7a0b1c;border:1px solid #f3b6bd;border-inline-start:6px solid #be2d34;border-radius:12px;padding:10px 16px;margin-bottom:18px;text-decoration:none}
+.alert b{background:#be2d34;color:#fff;border-radius:999px;padding:0 14px;font-size:13px;white-space:nowrap}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .alert{background:#2d1a1e;color:#ffc9d0;border-color:#5a2a33}}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.card{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;text-decoration:none;font-weight:600;box-shadow:0 2px 10px rgba(11,37,69,.07);transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(11,37,69,.14)}
+.ic{flex:none;width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:color-mix(in srgb,var(--gc) 13%,transparent);color:var(--gc)}
+.ic svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+footer div.fw{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px;opacity:1;margin-bottom:20px}
+footer section{display:grid;gap:6px;align-content:start}
+footer a{text-decoration:none;opacity:.85}footer a:hover{opacity:1;text-decoration:underline}
+.soc{display:flex;gap:8px}.soc a{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.14);display:grid;place-items:center;font-weight:700}
+.cp{border-top:1px solid rgba(255,255,255,.18);padding-top:14px}
+header:before{content:"";display:block;height:5px;background:linear-gradient(90deg,#be2d34 33.3%,#fff 33.3% 66.6%,#000 66.6%)}
+.hero h1{font-size:clamp(30px,4.5vw,44px);font-weight:700}
+.grp h2{font-size:clamp(24px,3vw,28px);font-weight:700}
+h1.pt{font-size:clamp(28px,4vw,40px);font-weight:700}
+.box{padding:22px;border-radius:12px}
+.box h3{font-size:20px;font-weight:600}
+.card{padding:20px;font-size:19px;font-weight:600}
+.ic{width:56px;height:56px}.ic svg{width:30px;height:30px}
+.btn{font-size:17px;padding:11px 24px;border-radius:10px}
+header{position:static}
+.bar{row-gap:6px}
+.brand{order:1;flex:1 1 auto;gap:16px}
+.seg{order:2}
+nav{order:3;width:100%;border-top:1px solid rgba(255,255,255,.18);padding-top:6px}
+.mark svg{width:58px;height:58px}
+.brand b{font-family:Cairo,"IBM Plex Sans Arabic",Tahoma,sans-serif;font-weight:900;font-size:clamp(28px,5.5vw,44px);line-height:1.25;color:#d9a441}
+.gd{color:#d9a441}
+footer .fw section:first-child b{color:#d9a441}
+@media(max-width:600px){.mark svg{width:44px;height:44px}}
+.th{aspect-ratio:16/9;border-radius:10px;margin-bottom:10px;border:1px dashed var(--line);background:repeating-linear-gradient(135deg,var(--bg) 0 12px,var(--card) 12px 24px);display:grid;place-items:center;color:var(--mute);font-size:13px}
+.hero:after{content:"";position:absolute;inset-inline-end:-60px;top:-60px;width:240px;height:240px;border-radius:50%;background:rgba(255,255,255,.1)}
+.hero>*{position:relative;z-index:1}
+.g1{--gc:#173b59}.g2{--gc:#1b7f5c}.g3{--gc:#be2d34}.g4{--gc:#96660f}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .g1{--gc:#8fb0ff}:root:not([data-theme="light"]) .g2{--gc:#4fd1a0}:root:not([data-theme="light"]) .g3{--gc:#ff6b7d}:root:not([data-theme="light"]) .g4{--gc:#e8b84f}}
+.chips a{border-color:var(--gc);border-inline-start-width:5px}
+.chips a:hover{background:var(--gc);color:var(--bg)}
+.box.g1,.box.g2,.box.g3,.box.g4{border-top:4px solid var(--gc)}
+.grp h2{border-color:var(--gc)}
+.crumb a,h1.pt{color:var(--gc,var(--acc))}
+.menu a{border-inline-start:4px solid var(--gc);margin-bottom:2px}
+.seg{display:flex;background:rgba(255,255,255,.18);border-radius:999px;padding:3px}
+.seg button{border:0;background:none;color:#fff;font:600 14px "IBM Plex Sans Arabic",Tahoma,sans-serif;padding:3px 14px;border-radius:999px;cursor:pointer}
+.seg button[aria-pressed=true]{background:#fff;color:#14243a}
+@media(prefers-reduced-motion:no-preference){.menu.open,#app>*{animation:d .25s ease-out}@keyframes d{from{opacity:0;transform:translateY(-4px)}}}
+</style>
+</head>
+<body>
+<header><div class="bar">
+<a class="brand" href="#home"><span class="mark"><svg viewBox="0 0 40 40" width="42" height="42" aria-hidden="true"><path d="M20 2 36 8v12c0 10-7 16-16 19C11 36 4 30 4 20V8z" fill="#c8102e" stroke="#c9962b" stroke-width="2"/><path d="M20 10l3 7h7l-5.500 4.500 2 7.500L20 24l-6.500 5 2-7.500L10 17h7z" fill="#fff"/></svg></span><span><b id="bn"></b><small id="bs"></small></span></a>
+<nav id="nav" aria-label="main"></nav>
+<div class="seg" role="group" aria-label="Language / اللغة"><button data-l="ar" lang="ar">عربي</button><button data-l="en" lang="en">English</button></div>
+</div></header>
+<main id="app"></main>
+<footer id="ftr"></footer>
+<script>
+// [id, عربي, English, group, description, subtopics, kind]
+var S=[
+["about","عن المجلس","About the Council",1,"التعريف بالمجلس، نشأته وتطوره، الاختصاصات والمهام، الأهداف، الرؤية والرسالة، الهيكل التنظيمي، الجهات الممثلة، والإطار القانوني والتنظيمي.",["التعريف بالمجلس","النشأة والتطور","الاختصاصات والمهام","الأهداف","الرؤية والرسالة","الهيكل التنظيمي","الجهات الممثلة","الإطار القانوني والتنظيمي"],"info"],
+["presidency","رئاسة المجلس والأمانة","Presidency & Secretariat",1,"المعلومات المعتمدة المتعلقة برئاسة المجلس وأمانته والاختصاصات والمسؤوليات وبيانات التواصل والهيكل الإداري عند اعتماده للنشر.",["رئاسة المجلس","الأمانة","الاختصاصات والمسؤوليات","بيانات التواصل","الهيكل الإداري"],"info"],
+["members","أعضاء المجلس والجهات الممثلة","Members & Represented Bodies",1,"الجهات الممثلة، ممثلو الجهات وفق البيانات المعتمدة، واللجان أو التمثيل المتخصص والمعلومات المصرح بنشرها.",["الجهات الممثلة","ممثلو الجهات","التمثيل المتخصص"],"info"],
+["committees","اللجان","Committees",1,"أسماء اللجان، اختصاصاتها، تشكيلها، برامجها وأعمالها، والتوصيات والمخرجات المعتمدة القابلة للنشر.",["أسماء اللجان","الاختصاصات","التشكيل","البرامج والأعمال","التوصيات والمخرجات"],"info"],
+["related","الجهات والمؤسسات ذات الصلة","Related Institutions",1,"الجهات والمؤسسات ذات العلاقة بمنظومة الدفاع المدني مع معلومات تعريفية وروابط رسمية عند اعتمادها.",["جهات حكومية","مؤسسات ومنظمات","روابط رسمية"],"info"],
+["decisions","القرارات والتوصيات","Decisions & Recommendations",2,"القرارات والتوصيات والتوجيهات والمخرجات المعتمدة لاجتماعات المجلس والتعاميم والإعلانات الرسمية، مع التصنيف حسب السنة أو الموضوع أو نوع الوثيقة.",["قرار","توصية","توجيه","تعميم"],"docs"],
+["laws","التشريعات واللوائح","Legislation & Regulations",2,"القوانين واللوائح والقرارات التنظيمية والأدلة والسياسات والأطر والمعايير والوثائق التنظيمية المصرح بنشرها.",["قانون","لائحة","دليل","سياسة","معيار"],"docs"],
+["plans","الخطط والاستراتيجيات","Plans & Strategies",2,"الاستراتيجيات والخطط العامة والتنفيذية والبرامج والمبادرات والمستهدفات والمؤشرات متى كان نشرها مناسباً.",["استراتيجية","خطة تنفيذية","برنامج","مبادرة"],"docs"],
+["reports","التقارير والإحصاءات والبيانات","Reports, Statistics & Data",2,"التقارير السنوية والدورية والإحصاءات والمؤشرات والبيانات العامة والدراسات والتقارير المتخصصة.",["تقرير سنوي","تقرير دوري","إحصاءات","دراسة"],"docs"],
+["library","المكتبة الإلكترونية","E-Library",2,"الكتب والمراجع والدراسات والأدلة والأوراق العلمية والمنشورات والمواد التوعوية والوثائق التاريخية المتاحة للنشر.",["كتاب","مرجع","ورقة علمية","وثيقة تاريخية"],"docs"],
+["archive","الأرشيف الإلكتروني","E-Archive",2,"نظام منظم لحفظ وأرشفة محتويات الموقع ووثائق المجلس، مع الوصول وفق الصلاحيات والسياسات المعتمدة.",[],"archive"],
+["news","الأخبار والأنشطة والفعاليات","News & Events",3,"أخبار المجلس والاجتماعات والزيارات والمؤتمرات والورش والفعاليات والمبادرات والبيانات الصحفية.",["اجتماع","زيارة","مؤتمر","ورشة عمل","بيان صحفي"],"docs"],
+["announcements","الإعلانات والتنبيهات الرسمية","Official Announcements",3,"الإعلانات والتنبيهات التي يصدرها المجلس مع إمكانية أرشفتها والرجوع إليها.",["إعلان","تنبيه رسمي"],"docs"],
+["gallery","معرض الصور والفيديو","Photo & Video Gallery",3,"الصور والفيديوهات والتغطيات الإعلامية والمواد الوثائقية الرسمية.",[],"gallery"],
+["contact","التواصل مع المجلس","Contact",3,"العنوان الرسمي وأرقام ووسائل الاتصال والبريد الإلكتروني ونموذج التواصل والاستفسارات وروابط الحسابات الرسمية إن وجدت.",[],"contact"],
+["search","البحث في الموقع","Site Search",4,"محرك بحث يتيح الوصول إلى الأخبار والقرارات والتوصيات والتقارير والقوانين واللوائح والوثائق والدراسات والبيانات.",[],"search"],
+["services","الخدمات والنماذج الإلكترونية","E-Services & Forms",4,"النماذج وطلبات المعلومات والتسجيل في الفعاليات والاستفسارات والخدمات الإلكترونية المستقبلية وفق احتياجات المجلس.",["طلب معلومات","التسجيل في فعالية","استفسار عام"],"services"],
+["awareness","التوعية والوقاية","Awareness & Prevention",4,"مواد التوعية وإرشادات الوقاية والسلامة والحملات التوعوية والمواد المرئية والمسموعة والأسئلة الشائعة.",["مواد التوعية","إرشادات الوقاية والسلامة","الحملات التوعوية","مواد مرئية ومسموعة","الأسئلة الشائعة"],"info"]
+];
+var G={ar:["","المعلومات المؤسسية","الوثائق والمعلومات الرسمية","الأخبار والتواصل","الخدمات والمعلومات التفاعلية"],en:["","Institutional Information","Official Documents","News & Contact","Services & Interactive"]};
+var U={
+ar:{n:"المجلس القومي للدفاع المدني",s:"الموقع الإلكتروني الرسمي",home:"الرئيسية",lang:"English",q:"المستودع والواجهة الرسمية للمعلومات المعتمدة للمجلس القومي للدفاع المدني.",ph:"ابحث في القرارات والتقارير والأخبار…",go:"بحث",f1:"المعلومة الرسمية",f2:"الوثيقة والمرجع",f3:"التواصل والخدمة",ln:"آخر الأخبار",ld:"آخر القرارات والتوصيات",all:"عرض الكل",demo:"محتوى تجريبي: العناوين والتواريخ أدناه نماذج توضيحية، وتُستبدل بالمحتوى المعتمد من المجلس قبل النشر.",ready:"قيد الإعداد — يُنشر بعد اعتماد المجلس",type:"كل الأنواع",yr:"كل السنوات",filt:"تصفية بالعنوان…",none:"لا توجد نتائج مطابقة. جرّب كلمات أخرى.",res:"نتيجة",lock:"وفق الصلاحيات",nm:"الاسم",em:"البريد الإلكتروني",sb:"الموضوع",ms:"نص الرسالة",send:"إرسال",sent:"تم تسجيل النموذج. (عرض تجريبي: لم يُرسل أي بيانات.)",addr:"العنوان الرسمي وأرقام الاتصال: تُضاف بعد الاعتماد.",en:"",rt:"جميع الحقوق محفوظة — المجلس القومي للدفاع المدني",photo:"صورة",video:"فيديو",all2:"الكل",enNote:"",wel:"أهلاً بكم في الموقع الرسمي للمجلس القومي للدفاع المدني",alt:"تنبيه رسمي",al:"نموذج: تظهر هنا التنبيهات العاجلة الصادرة عن المجلس.",ann:"الإعلانات الرسمية",img:"صورة الخبر (16:9)",fl1:"روابط مهمة",fl2:"بيانات التواصل",fl3:"تابعونا"},
+en:{n:"National Civil Defense Council",s:"Official Website",home:"Home",lang:"العربية",q:"The official repository and gateway for the Council’s approved information.",ph:"Search decisions, reports, news…",go:"Search",f1:"Official information",f2:"Documents & references",f3:"Contact & services",ln:"Latest news",ld:"Latest decisions & recommendations",all:"View all",demo:"Sample content: titles and dates below are placeholders, to be replaced with Council-approved content before publication.",ready:"In preparation — published once approved by the Council",type:"All types",yr:"All years",filt:"Filter by title…",none:"No matching results. Try other words.",res:"results",lock:"Permission-based",nm:"Name",em:"Email",sb:"Subject",ms:"Message",send:"Send",sent:"Form recorded. (Demo: no data was sent.)",addr:"Official address and phone numbers: to be added once approved.",rt:"© National Civil Defense Council",photo:"Photo",video:"Video",all2:"All",enNote:"English text for this section will be published as decided by the Council; the Arabic description is shown for now.",wel:"Welcome to the official website of the National Civil Defense Council",alt:"Official alert",al:"Sample: urgent official alerts issued by the Council appear here.",ann:"Official announcements",img:"News image (16:9)",fl1:"Important links",fl2:"Contact",fl3:"Follow us"}
+};
+var L="ar",QS="",$=function(i){return document.getElementById(i)};
+var t=function(k){return U[L][k]};
+var esc=function(s){var d=document.createElement("div");d.textContent=s;return d.innerHTML};
+var nm=function(s){return L=="ar"?s[1]:s[2]};
+// sample documents built from each section's own sub-types
+var D=[];
+S.forEach(function(s){if(s[6]=="docs")s[5].forEach(function(k,i){for(var j=0;j<2;j++)D.push({sec:s[0],i:i,j:j,y:2026-((i+j)%3),d:(1+i*3+j)+"/"+(1+(i+j)%12)})})});
+var sec=function(id){return S.filter(function(s){return s[0]==id})[0]};
+var E={about:["About the Council: its establishment and development, mandate and tasks, objectives, vision and mission, organizational structure, represented bodies, and the legal and regulatory framework.",["About the Council","Establishment & development","Mandate & tasks","Objectives","Vision & mission","Organizational structure","Represented bodies","Legal & regulatory framework"]],
+presidency:["Approved information on the Council’s presidency and secretariat, their mandates and responsibilities, contact details and administrative structure, once approved for publication.",["Council presidency","Secretariat","Mandates & responsibilities","Contact details","Administrative structure"]],
+members:["Represented bodies, their representatives per approved data, and specialized committees or representation, as authorized for publication.",["Represented bodies","Body representatives","Specialized representation"]],
+committees:["Committee names, mandates, composition, programs and work, and approved recommendations and outputs that may be published.",["Committee names","Mandates","Composition","Programs & work","Recommendations & outputs"]],
+related:["Institutions related to the civil defense system, with introductory information and official links once approved.",["Government bodies","Institutions & organizations","Official links"]],
+decisions:["Approved decisions, recommendations, directives and outputs of Council meetings, circulars and official announcements, classified by year, topic or document type.",["Decision","Recommendation","Directive","Circular"]],
+laws:["Authorized laws, regulations, regulatory decisions, guides, policies, frameworks and standards.",["Law","Regulation","Guide","Policy","Standard"]],
+plans:["Strategies, general and executive plans, programs, initiatives, targets and indicators where publication is appropriate.",["Strategy","Executive plan","Program","Initiative"]],
+reports:["Annual and periodic reports, statistics, indicators, public data, studies and specialized reports.",["Annual report","Periodic report","Statistics","Study"]],
+library:["Books, references, studies, guides, scientific papers, publications, awareness materials and historical documents available for publication.",["Book","Reference","Scientific paper","Historical document"]],
+archive:["An organized system for archiving site content and Council documents, with access according to approved permissions and policies.",[]],
+news:["Council news, meetings, visits, conferences, workshops, events, initiatives and press releases.",["Meeting","Visit","Conference","Workshop","Press release"]],
+announcements:["Announcements and alerts issued by the Council, archived for later reference.",["Announcement","Official alert"]],
+gallery:["Official photos, videos, media coverage and documentary material.",[]],
+contact:["Official address, phone numbers, email, contact form and inquiries, and official account links where available.",[]],
+search:["A search engine for news, decisions, recommendations, reports, laws, regulations, documents, studies and data.",[]],
+services:["Forms, information requests, event registration, inquiries and future e-services as the Council requires.",["Information request","Event registration","General inquiry"]],
+awareness:["Awareness materials, prevention and safety guidance, awareness campaigns, audio-visual materials and FAQs.",["Awareness materials","Prevention & safety guidance","Awareness campaigns","Audio-visual materials","FAQ"]]};
+var dsc=function(s){return L=="ar"?s[4]:E[s[0]][0]};
+var sbs=function(s){return L=="ar"?s[5]:E[s[0]][1]};
+var typ=function(x){return sbs(sec(x.sec))[x.i]};
+var ttl=function(x){return typ(x)+(L=="ar"?" — نموذج ":" — Sample ")+(x.j+1)};
+function build(){
+ var NH=L=="ar"?'المجلس القومي <span class="gd">للدفاع المدني</span>':'National <span class="gd">Civil Defense</span> Council';$("bn").innerHTML=NH;$("bs").textContent=t("s");document.querySelectorAll(".seg button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.l==L)});$("ftr").innerHTML='<div class="fw"><section><b>'+NH+'</b><span>'+t("q")+'</span></section><section><b>'+t("fl1")+'</b>'+["about","decisions","news","services","contact"].map(function(i){return'<a href="#'+i+'">'+nm(sec(i))+'</a>'}).join("")+'</section><section><b>'+t("fl2")+'</b><span>'+t("addr")+'</span></section><section><b>'+t("fl3")+'</b><span class="soc"><a href="#contact" aria-label="X">X</a><a href="#contact" aria-label="Facebook">f</a><a href="#contact" aria-label="YouTube">▶</a></span></section></div><div class="cp">'+t("rt")+'</div>';
+ document.documentElement.lang=L;document.documentElement.dir=L=="ar"?"rtl":"ltr";
+ var h='<div><a class="nb" href="#home" style="text-decoration:none">'+t("home")+'</a></div>';
+ for(var g=1;g<5;g++){h+='<div><button class="nb" aria-expanded="false" data-g="'+g+'">'+G[L][g]+' ▾</button><div class="menu" id="m'+g+'">'+S.filter(function(s){return s[3]==g}).map(function(s){return'<a class="g'+g+'" href="#'+s[0]+'">'+nm(s)+'</a>'}).join("")+'</div></div>'}
+ $("nav").innerHTML=h;
+}
+function closeMenus(){document.querySelectorAll(".menu").forEach(function(m){m.classList.remove("open")});document.querySelectorAll(".nb[data-g]").forEach(function(b){b.setAttribute("aria-expanded","false")})}
+document.addEventListener("click",function(e){var b=e.target.closest(".nb[data-g]");var was=b&&b.getAttribute("aria-expanded")=="true";closeMenus();if(b&&!was){b.setAttribute("aria-expanded","true");$("m"+b.dataset.g).classList.add("open")}});
+document.querySelectorAll(".seg button").forEach(function(b){b.onclick=function(){L=b.dataset.l;build();route()}});
+function docRow(x){var s=sec(x.sec);return'<div class="row"><div><a href="#'+x.sec+'"><b>'+ttl(x)+'</b></a><div class="meta">'+nm(s)+' · '+x.y+'</div></div><span class="tag">'+typ(x)+'</span></div>'}
+function crumb(s){return'<div class="g'+s[3]+'"><div class="crumb"><a href="#home">'+t("home")+'</a> / '+G[L][s[3]]+'</div><h1 class="pt">'+nm(s)+'</h1><p class="lead">'+dsc(s)+'</p></div>'}
+var IC={info:"M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6",docs:"M7 3h7l5 5v13H7zM14 3v5h5M10 13h6M10 17h6",news:"M4 10v4h3l7 4V6L7 10zM17 9a4 4 0 010 6",gallery:"M4 5h16v14H4zM4 16l5-5 4 4 3-3 4 4",contact:"M5 4h4l2 5-2 1a11 11 0 005 5l1-2 5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2",search:"M11 4a7 7 0 100 14 7 7 0 000-14zM21 21l-5-5",services:"M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 16l3 3 5-6",archive:"M3 4h18v4H3zM5 8v12h14V8M10 12h4",awareness:"M12 3l8 3v6c0 5-3.500 8-8 9-4.500-1-8-4-8-9V6zM9 12l2 2 4-4"};
+var ico=function(s){var k=s[0]=="news"||s[0]=="announcements"?"news":s[0]=="awareness"?"awareness":s[6];return'<span class="ic"><svg viewBox="0 0 24 24"><path d="'+IC[k]+'"/></svg></span>'};
+var HV='<svg viewBox="0 0 360 260"><circle cx="270" cy="70" r="40" fill="#c9962b" opacity=".9"/><path d="M0 205h360v55H0z" fill="#06182f"/><rect x="40" y="130" width="190" height="62" rx="8" fill="#c8102e"/><rect x="200" y="106" width="70" height="86" rx="8" fill="#e11d3b"/><rect x="212" y="116" width="46" height="30" rx="4" fill="#bfe3ff"/><path d="M50 118l130-34" stroke="#e8edf3" stroke-width="7" stroke-linecap="round"/><rect x="60" y="150" width="120" height="6" fill="#fff" opacity=".8"/><circle cx="90" cy="196" r="18" fill="#111"/><circle cx="90" cy="196" r="7" fill="#aaa"/><circle cx="235" cy="196" r="18" fill="#111"/><circle cx="235" cy="196" r="7" fill="#aaa"/><circle cx="305" cy="170" r="24" fill="#1b7f5c"/><path d="M305 158v24M293 170h24" stroke="#fff" stroke-width="6" stroke-linecap="round"/></svg>';
+function home(){
+ var news=D.filter(function(x){return x.sec=="news"}).slice(0,3),dec=D.filter(function(x){return x.sec=="decisions"}).slice(0,3);
+ var h='<a class="alert" href="#announcements"><b>'+t("alt")+'</b><span>'+t("al")+'</span></a><section class="hero"><div><h1>'+t("wel")+'</h1><p class="wel">'+t("q")+'</p><form class="sf" onsubmit="return go(this)" style="margin-top:18px"><input name="q" placeholder="'+t("ph")+'" aria-label="'+t("go")+'"><button class="btn">'+t("go")+'</button></form></div><div class="hv" aria-hidden="true">'+HV+'</div></section>';
+ h+='<div class="flow"><span>'+t("f1")+'</span><i>←</i><span>'+t("f2")+'</span><i>←</i><span>'+t("f3")+'</span></div><div class="demo">'+t("demo")+'</div>';
+ h+='<div class="cols"><div class="box g3"><h3>'+t("ln")+'</h3>'+news.map(function(x){return'<a class="li" href="#news"><span class="th">'+t("img")+'</span><b>'+ttl(x)+'</b><br><small>'+x.d+'/'+x.y+'</small></a>'}).join("")+'<a class="li" href="#news"><small>'+t("all")+'</small></a></div>';
+ h+='<div class="box g2"><h3>'+t("ld")+'</h3>'+dec.map(function(x){return'<a class="li" href="#decisions"><b>'+ttl(x)+'</b><br><small>'+x.d+'/'+x.y+'</small></a>'}).join("")+'<a class="li" href="#decisions"><small>'+t("all")+'</small></a></div><div class="box g4"><h3>'+t("ann")+'</h3>'+D.filter(function(x){return x.sec=="announcements"}).slice(0,3).map(function(x){return'<a class="li" href="#announcements"><b>'+ttl(x)+'</b><br><small>'+x.d+'/'+x.y+'</small></a>'}).join("")+'<a class="li" href="#announcements"><small>'+t("all")+'</small></a></div></div>';
+ for(var g=1;g<5;g++)h+='<div class="grp g'+g+'"><h2>'+G[L][g]+'</h2><div class="cards">'+S.filter(function(s){return s[3]==g}).map(function(s){return'<a class="card" href="#'+s[0]+'">'+ico(s)+'<span>'+nm(s)+'</span></a>'}).join("")+'</div></div>';
+ return h}
+function info(s){return crumb(s)+'<div class="grid">'+sbs(s).map(function(k){return'<div class="box g'+s[3]+'"><h3>'+k+'</h3><p class="meta">'+t("ready")+'</p></div>'}).join("")+'</div>'}
+function docs(s,items,filters){
+ var types=[],yrs=[];items.forEach(function(x){if(types.indexOf(typ(x))<0)types.push(typ(x));if(yrs.indexOf(x.y)<0)yrs.push(x.y)});yrs.sort().reverse();
+ var h=(s?crumb(s):'<div class="crumb"><a href="#home">'+t("home")+'</a></div><h1 class="pt">'+nm(sec("archive"))+'</h1><p class="lead">'+dsc(sec("archive"))+'</p>')+'<div class="demo">'+t("demo")+'</div>';
+ h+='<div class="tools"><input id="ft" placeholder="'+t("filt")+'" aria-label="'+t("filt")+'"><select id="fk" aria-label="type"><option value="">'+t("type")+'</option>'+types.map(function(k){return'<option>'+k+'</option>'}).join("")+'</select><select id="fy" aria-label="year"><option value="">'+t("yr")+'</option>'+yrs.map(function(y){return'<option>'+y+'</option>'}).join("")+'</select></div><div id="lst"></div>';
+ setTimeout(function(){var p=function(){var q=$("ft").value.trim(),k=$("fk").value,y=$("fy").value;
+  var r=items.filter(function(x){return(!q||ttl(x).toLowerCase().indexOf(q.toLowerCase())>=0)&&(!k||typ(x)==k)&&(!y||x.y==y)});
+  $("lst").innerHTML=r.length?r.map(function(x,i){return docRow(x).replace('</span></div>','</span>'+(filters&&i%4==3?'<span class="tag">🔒 '+t("lock")+'</span>':'')+'</div>')}).join(""):'<p class="meta">'+t("none")+'</p>'};
+  ["ft","fk","fy"].forEach(function(i){$(i).oninput=p});p()},0);
+ return h}
+function gallery(s){
+ var h=crumb(s)+'<div class="demo">'+t("demo")+'</div><div class="tools"><select id="gk" aria-label="type"><option value="">'+t("all2")+'</option><option value="p">'+t("photo")+'</option><option value="v">'+t("video")+'</option></select></div><div class="grid" id="gt"></div>';
+ setTimeout(function(){var p=function(){var k=$("gk").value,o="";for(var i=0;i<8;i++){var v=i%3==2?"v":"p";if(!k||k==v)o+='<div class="tile">'+(v=="v"?"▶ "+t("video"):"▣ "+t("photo"))+' '+(i+1)+'</div>'}$("gt").innerHTML=o};$("gk").oninput=p;p()},0);return h}
+function formHTML(id,fields){return'<form class="f" onsubmit="return sendF(this,event)">'+fields.map(function(f){return'<label>'+t(f[0])+(f[1]?'<textarea rows="4" required></textarea>':'<input '+(f[0]=="em"?'type="email" ':'')+'required>')+'</label>'}).join("")+'<button class="btn">'+t("send")+'</button><div class="ok" hidden role="status">'+t("sent")+'</div></form>'}
+function sendF(f,e){e.preventDefault();f.querySelector(".ok").hidden=false;f.reset();return false}
+function contact(s){return crumb(s)+'<div class="cols"><div class="box"><h3>'+t("sb")+'</h3><p>'+t("addr")+'</p></div><div class="box">'+formHTML("c",[["nm"],["em"],["sb"],["ms",1]])+'</div></div>'}
+function services(s){return crumb(s)+sbs(s).map(function(k){return'<details class="box g'+s[3]+'"><summary>'+k+'</summary><div style="margin-top:12px">'+formHTML(k,[["nm"],["em"],["ms",1]])+'</div></details>'}).join("")}
+function go(f){QS=f.q.value.trim();location.hash="search";if(location.hash=="#search")route();return false}
+function search(s){
+ var h=crumb(s)+'<form class="sf" onsubmit="QS=this.q.value.trim();route();return false"><input name="q" value="'+esc(QS).replace(/"/g,"&quot;")+'" placeholder="'+t("ph")+'" aria-label="'+t("go")+'"><button class="btn">'+t("go")+'</button></form><div id="sr" style="margin-top:16px"></div>';
+ setTimeout(function(){if(!QS){$("sr").innerHTML="";return}
+  var secs=S.filter(function(x){return(x[1]+x[2]+x[4]+x[5].join(" ")+E[x[0]][0]+E[x[0]][1].join(" ")).toLowerCase().indexOf(QS.toLowerCase())>=0});
+  var ds=D.filter(function(x){return (ttl(x)+typ(x)).toLowerCase().indexOf(QS.toLowerCase())>=0});
+  var o='<p class="meta">'+(secs.length+ds.length)+' '+t("res")+'</p>'+secs.map(function(x){return'<div class="row"><div><a href="#'+x[0]+'"><b>'+nm(x)+'</b></a><div class="meta">'+G[L][x[3]]+'</div></div></div>'}).join("")+ds.map(docRow).join("");
+  $("sr").innerHTML=secs.length+ds.length?o:'<p class="meta">'+t("none")+'</p>'},0);return h}
+function route(){
+ closeMenus();var id=location.hash.slice(1)||"home",s=sec(id),a=$("app"),h;
+ if(!s){h=home()}else{var k=s[6];h=k=="info"?info(s):k=="docs"?docs(s,D.filter(function(x){return x.sec==id})):k=="archive"?docs(null,D,true):k=="gallery"?gallery(s):k=="contact"?contact(s):k=="services"?services(s):search(s)}
+ a.innerHTML=h;document.title=(s?nm(s)+" | ":"")+t("n");window.scrollTo(0,0)}
+window.addEventListener("hashchange",route);build();route();
+</script>
+</body>
+</html>
